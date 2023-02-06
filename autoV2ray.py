@@ -214,7 +214,7 @@ def mac_sub_start():
 
 def linux_sub_setall():
 	linux_createsublink = (os.path.expanduser(f"{main_path}/subscriptions"))
-	if linux_cmd_status(f"ls {main_path}/subscriptions &> /dev/null") == 0:
+	if mac_checkExistDir(f"ls {main_path}/subscriptions &> /dev/null") == 0:
 		print(f"{color_red}Subscriptions link Directory Already exist {color_reset}")
 	else:
 		os.mkdir(linux_createsublink)
